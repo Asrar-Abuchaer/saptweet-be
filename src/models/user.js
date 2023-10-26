@@ -1,8 +1,8 @@
 const { sequelize, Sequelize } = require(".");
 
 module.exports = (sequelize, Sequelize) => {
-  const users = sequelize.define(
-    "users",
+  const user = sequelize.define(
+    "user",
     {
       id: {
         allowNull: false,
@@ -28,5 +28,5 @@ module.exports = (sequelize, Sequelize) => {
       tableName: "users",
     }
   );
-  return users;
+  return user;
 };

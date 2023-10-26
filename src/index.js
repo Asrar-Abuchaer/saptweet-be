@@ -27,9 +27,9 @@ app.use(
 );
 
 const creatorRouter = require("./routes/creatorRoute");
-
-app.use("/creators", creatorRouter);
-
+const userRouter = require("./routes/userRoute");
+app.use("/api/creators", creatorRouter);
+app.use("/api/users", userRouter);
 app.listen(PORT, () => {
   console.log(__dirname);
   console.log(`Server started on port ${PORT}`);
