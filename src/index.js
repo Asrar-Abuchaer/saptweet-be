@@ -26,9 +26,9 @@ app.use(
   })
 );
 
-// const branchRouter = require("./routes/branchRouter");
+const creatorRouter = require("./routes/creatorRoute");
 
-// app.use("/branchs", branchRouter);
+app.use("/creators", creatorRouter);
 
 app.listen(PORT, () => {
   console.log(__dirname);
