@@ -12,7 +12,9 @@ const findAllUserQuery = async (username) => {
           [Op.like]: `%${username}%`,
         },
       };
-    const res = await user.findAll({});
+    const res = await user.findAll({
+      ...filter,
+    });
     return res;
   } catch (err) {
     throw err;
